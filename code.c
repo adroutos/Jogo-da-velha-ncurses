@@ -22,6 +22,7 @@ int main(void)
     start_color();
     keypad(stdscr,TRUE);
     curs_set(0);
+  //  menu();
     jogo(gx,go);
 }
 
