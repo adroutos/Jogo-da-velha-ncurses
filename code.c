@@ -377,7 +377,7 @@ void menu(void)
                         menu();
                     }
 
-                }/*
+                }
                 if(a == 4)
                 {
                     mvprintw(l/2 - 5,c/2 - 25,"ADEUS");
@@ -386,10 +386,15 @@ void menu(void)
                     napms(600);
                     refresh();
                     endwin();
-                }*/
+                }
+
+                setbuf(stdin,NULL);
                 break;
         }
+     //   setbuf(stdin,NULL);
     }while(r != 'q');
+    
+        //setbuf(stdin,NULL);
 }
 /************************************************************************************************
  *funcao que checará que ganhou!!*/
