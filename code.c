@@ -1,3 +1,6 @@
+/* Jogo da velha em ncurses by Adriano Pedro(@adroutos)
+*/
+
 #include<ncurses.h>
 
 #define MAX 35
