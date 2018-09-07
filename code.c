@@ -1,6 +1,5 @@
 /* Jogo da velha em ncurses by Adriano Pedro(@adroutos)
 */
-
 #include<ncurses.h>
 
 #define MAX 35
@@ -19,13 +18,16 @@ int main(void)
 {
     int gx[1] = {0};
     int go[1] = {0};
+
     initscr();
     cbreak();
     noecho();
     start_color();
     keypad(stdscr,TRUE);
     curs_set(0);
-  //  menu();
+    refresh();
+    cores();
+    menu();
     jogo(gx,go);
 }
 
@@ -41,7 +43,6 @@ void jogo(int gx[1],int go[1])
     refresh();
     matriz[il][ic] = '@';
     cores();
-    menu();
     coloca();
     refresh();
     print();

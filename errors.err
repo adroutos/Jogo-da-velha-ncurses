@@ -1,8 +1,8 @@
 code.c: In function ‘imprimemenu’:
-code.c:253:11: warning: unused variable ‘j’ [-Wunused-variable]
+code.c:259:11: warning: unused variable ‘j’ [-Wunused-variable]
      int i,j,l,c,pula = 0;
            ^
 code.c: In function ‘menu’:
-code.c:280:21: warning: unused variable ‘b’ [-Wunused-variable]
+code.c:286:21: warning: unused variable ‘b’ [-Wunused-variable]
      int l,c,r,a = 0,b;
                      ^
