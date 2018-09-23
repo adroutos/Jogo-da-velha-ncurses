@@ -281,7 +281,7 @@ void imprimemenu(int *a,char menuzao[5][15])
 }
 void menu(void)
 {
-    int l,c,r,a = 0,b;
+    int l,c,r,a = 0,b,ch;
     char menuzao[5][15] = {{"IR PARA O JOGO"},
                            {"REGRAS"},
                            {"CONTROLES"},
@@ -391,14 +391,9 @@ void menu(void)
                     refresh();
                     endwin();
                 }
-
-                setbuf(stdin,NULL);
                 break;
         }
-     //   setbuf(stdin,NULL);
     }while(r != 'q');
-    
-        //setbuf(stdin,NULL);
 }
 /************************************************************************************************
  *funcao que checará que ganhou!!*/
