@@ -1,0 +1,75 @@
+\documentclass[a4paper,10pt]{article} %twocolumn
+\usepackage[utf8]{inputenc} % letras acentuadas
+\usepackage[portuguese]{babel} % tradução de títulos
+\usepackage{algorithm} % ambiente para índice de algoritmos
+\usepackage{algpseudocode} % fonte e estilo do algoritmo
+%[noend]
+
+\floatname{algorithm}{Algoritmo} % tradução da palavra algorítimo no ambiente de índice
+
+\title{O algoritmo de conversão de AFND para ER}
+\author{Ruben Carlo Benante}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+Vamos comparar os algoritmos \textit{xsort} e \textit{ysort} para bla bla.
+
+\end{abstract}
+
+
+\section{Introdução ao Minimax}
+
+O algoritmo \textit{Minimax} trabalha percorrendo uma árvore
+
+\section{O Jogo \textit{Connect-4}}
+
+O jogo \textit{Connect-4} (C4) consiste em...
+
+\section{Implementação}
+
+Para conseguir blablabla
+
+O algoritmo \textit{Minimax} segue abaixo:
+
+\begin{algorithm}
+\caption{Algoritmo Minimax}\label{alg:minimax}
+\begin{algorithmic}[1]
+\Function{minimax}{estado}\Comment{retorna uma ação}
+\State \textbf{Entradas}: estado é a configuração atual do jogo
+\State $v\gets \mathrm{maxvalor}{(estado)}$
+\State \textbf{returna} a ação $a$ em sucessores(estado) cujo valor é $v$ %\Comment{comentario}
+% \While{$r\not=0$}\Comment{We have the answer if r is 0}
+% \State $a\gets b$
+% \State $b\gets r$
+% \State $r\gets a\bmod b$
+% \EndWhile\label{euclidendwhile}
+\EndFunction
+\Function{maxvalor}{estado}\Comment{retorna o valor estático}
+\If{fim(estado)}
+   \State \textbf{retorna} estatico(estado)
+\EndIf
+\State $v \gets -\infty$
+\For{todas ações $a$ nos sucessores(estado)}
+    \State $v \gets \max{(v, \mathrm{minvalor}(a))}$
+\EndFor
+\State \textbf{retorna} $v$
+\EndFunction
+\Function{minvalor}{estado}\Comment{retorna o valor estático}
+\If{fim(estado)}
+   \State \textbf{retorna} estatico(estado)
+\EndIf
+\State $v \gets \infty$
+\For{todas ações $a$ nos sucessores(estado)}
+    \State $v \gets \min{(v, \mathrm{maxvalor}(a))}$
+\EndFor
+\State \textbf{retorna} $v$
+\EndFunction
+\end{algorithmic}
+\end{algorithm}
+
+
+\end{document}
